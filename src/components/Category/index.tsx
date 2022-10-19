@@ -1,9 +1,4 @@
-import React from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
-import {
-  HiOutlineArrowLongLeft,
-  HiOutlineArrowLongRight,
-} from "react-icons/hi2";
 import Slider from "react-slick";
 
 const TopCategories = () => {
