@@ -1,4 +1,5 @@
 import React from "react";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import {
   HiOutlineArrowLongLeft,
   HiOutlineArrowLongRight,
@@ -6,6 +7,35 @@ import {
 import Slider from "react-slick";
 
 const TopCategories = () => {
+  const PrevArrow = (props: any) => {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "flex" }}
+        onClick={onClick}
+      >
+        <span className="arrow-left">
+          <BsArrowLeft style={{ fontSize: "18px" }} />
+        </span>
+      </div>
+    );
+  };
+
+  const NextArrow = (props: any) => {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "flex" }}
+        onClick={onClick}
+      >
+        <span className="arrow-right">
+          <BsArrowRight style={{ fontSize: "18px" }} />
+        </span>
+      </div>
+    );
+  };
   const settings = {
     dots: false,
     infinite: false,
@@ -13,8 +43,8 @@ const TopCategories = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
-    prevArrow: <HiOutlineArrowLongLeft />,
-    nextArrow: <HiOutlineArrowLongRight />,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
   };
   return (
     <div className="category-container">

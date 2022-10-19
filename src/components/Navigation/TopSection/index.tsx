@@ -22,7 +22,13 @@ export default function TopSection(props: IAppProps) {
               }}
             >
               <span>Eng</span>{" "}
-              <span>
+              <span
+                style={{
+                  display: "flex",
+                  alignContent: "center",
+                  paddingLeft: "5px",
+                }}
+              >
                 <VscChevronDown />
               </span>
             </li>

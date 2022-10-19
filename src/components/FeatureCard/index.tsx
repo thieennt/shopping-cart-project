@@ -1,10 +1,6 @@
-import {
-  HiOutlineArrowLongLeft,
-  HiOutlineArrowLongRight,
-} from "react-icons/hi2";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
+
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { CiShoppingCart } from "react-icons/ci";
 
 interface IData {
@@ -23,6 +19,37 @@ export interface IFeatureCardProps {
 
 export default function FeatureCard(props: IFeatureCardProps) {
   const { title, data, slide } = props;
+
+  const PrevArrow = (props: any) => {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "flex" }}
+        onClick={onClick}
+      >
+        <span className="arrow-left">
+          <BsArrowLeft style={{ fontSize: "18px" }} />
+        </span>
+      </div>
+    );
+  };
+
+  const NextArrow = (props: any) => {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "flex" }}
+        onClick={onClick}
+      >
+        <span className="arrow-right">
+          <BsArrowRight style={{ fontSize: "18px" }} />
+        </span>
+      </div>
+    );
+  };
+
   const settings = {
     dots: false,
     infinite: false,
@@ -30,8 +57,8 @@ export default function FeatureCard(props: IFeatureCardProps) {
     slidesToShow: slide,
     slidesToScroll: 1,
     initialSlide: 0,
-    prevArrow: <HiOutlineArrowLongLeft />,
-    nextArrow: <HiOutlineArrowLongRight />,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
   };
   return (
     <div className="card-container">
