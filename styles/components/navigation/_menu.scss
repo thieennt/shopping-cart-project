@@ -12,9 +12,23 @@
     margin-right: auto;
 
     .menu-section {
+      @include breakpoint(sm) {
+        width: 100%;
+      }
     }
 
     .contact-info {
+      @include breakpoint(sm) {
+        display: none;
+      }
+    }
+  }
+
+  .ant-menu-overflow {
+    @include breakpoint(sm) {
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
     }
   }
 }

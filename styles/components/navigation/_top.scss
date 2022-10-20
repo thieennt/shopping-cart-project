@@ -4,6 +4,10 @@
   padding: 10px 2rem;
   color: #fff;
 
+  @include breakpoint(sm) {
+    display: none;
+  }
+
   .top-wrapper {
     display: flex;
     justify-content: space-between;

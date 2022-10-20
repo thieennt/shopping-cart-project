@@ -10,10 +10,22 @@
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
+
+    @include breakpoint(sm) {
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+      column-gap: 30px;
+    }
     .company-logo-item {
       img {
         width: 100px;
         height: auto;
+
+        @include breakpoint(sm) {
+          width: 80px;
+          height: auto;
+        }
       }
     }
   }

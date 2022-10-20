@@ -59,6 +59,21 @@ export default function FeatureCard(props: IFeatureCardProps) {
     initialSlide: 0,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
+
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      // {
+      //   breakpoint: 1024,
+      //   settings: {
+      //     slidesToShow: slide,
+      //   },
+      // },
+    ],
   };
   return (
     <div className="card-container">

@@ -16,6 +16,12 @@
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
       0 4px 6px -4px rgb(0 0 0 / 0.1);
 
+    @include breakpoint(sm) {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      padding: 30px 20px;
+    }
+
     .feature-item {
       display: flex;
       justify-content: center;
